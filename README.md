@@ -1,4 +1,6 @@
- # Snake Game (js code documentation)
+ # Snake Game (js code documentation) 
+ 
+     just use the arrows to play the game 
 
 This code implements a simple Snake Game using JavaScript and HTML5 canvas.
 Variables
