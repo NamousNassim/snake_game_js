@@ -27,18 +27,12 @@ window.onload = function() {
     placeFood();
     document.addEventListener("keyup", changeDirection);
 
-    setInterval(update, 1000 / 10);
+    setInterval(update, 1000/ 100);
 };
 
 function update() {
     if (gameOver) {
-       gameOver = false; // Reset the game over flag
-        snakeX = blocksize * 5; // Reset the snake's position
-        snakeY = blocksize * 5;
-        velocityX = 0; // Reset the snake's velocity
-        velocityY = 0;
-        snakeBody = []; // Reset the snake's body
-        placeFood(); // Pla
+           window.location.reload();
     }
     context.fillStyle = 'black';
     context.fillRect(0, 0, board.width, board.height);
@@ -71,7 +65,6 @@ function update() {
 
     if (snakeX < 0 || snakeX >= cols * blocksize || snakeY < 0 || snakeY >= rows * blocksize) {
         gameOver = true;
-        alert("Game Over!");
     }
 
     for (let i = 0; i < snakeBody.length; i++) {
