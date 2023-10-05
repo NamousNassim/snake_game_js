@@ -32,7 +32,13 @@ window.onload = function() {
 
 function update() {
     if (gameOver) {
-        window.location.reload()
+       gameOver = false; // Reset the game over flag
+        snakeX = blocksize * 5; // Reset the snake's position
+        snakeY = blocksize * 5;
+        velocityX = 0; // Reset the snake's velocity
+        velocityY = 0;
+        snakeBody = []; // Reset the snake's body
+        placeFood(); // Pla
     }
     context.fillStyle = 'black';
     context.fillRect(0, 0, board.width, board.height);
