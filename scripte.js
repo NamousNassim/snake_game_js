@@ -32,7 +32,7 @@ window.onload = function() {
 
 function update() {
     if (gameOver) {
-         location.reload();
+        window.location.reload()
     }
     context.fillStyle = 'black';
     context.fillRect(0, 0, board.width, board.height);
